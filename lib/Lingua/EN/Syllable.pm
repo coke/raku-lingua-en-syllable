@@ -43,7 +43,6 @@ my @AddSyl =
     / 'dnt' $/,           # couldn't
 ;
 
-
 # (comments refer to titan's /usr/dict/words)
 # [1] alien, salient, but not lien or ebbullient...
 #     (those are the only 2 exceptions i found, there may be others)
@@ -51,25 +50,15 @@ my @AddSyl =
 #     coadjutor coagulable coagulate coalesce coalescent coalition coaxial
 
 sub syllable($word is copy) is export {
-    my @scrugg;  # syllable chunks
-    my $syl = 0; # syllable count
+    # fold contractions, remove silent e
+    $word = $word.lc.subst("'", "").subst(/ 'e' $/ , "");
 
-    $word = $word.lc;
-    $word = $word.subst("'", "");       # fold contractions
-    $word = $word.subst(/ 'e' $/ , ""); # remove trailing e
+    # count vowel groupings, track special cases
+    my $syl = $word.comb(/<[aeiouy]>+/) 
+              + @AddSyl.grep(-> $re { $word ~~ $re })
+              - @SubSyl.grep(-> $re { $word ~~ $re });
 
-    @scrugg = $word.comb(/<[aeiouy]>+/);
-
-    # special cases
-    for @SubSyl -> $re {
-        $syl-- if $word ~~ $re;
-    }
-    for @AddSyl -> $re {
-        $syl++ if $word ~~ $re;
-    }
-    $syl++ if $word.chars==1;	# 'x'
-    # count vowel groupings
-    $syl += +@scrugg;
-    $syl=1 if $syl==0; # got no vowels? ("the", "crwth")
-    return $syl;
+    # Every word has at least one syllable
+    return max($syl, 1);
 }
+
