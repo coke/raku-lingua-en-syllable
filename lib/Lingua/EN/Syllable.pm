@@ -22,7 +22,7 @@ my @SubSyl =
     / 'ion' /,
     / 'iou' /,
     / 'sia' $ /,
-    / . 'ely' $ / ,             # absolutely! (but not ely!)
+    / . 'ely' $ / ,         # absolutely! (but not ely!)
 ;
 
 my @AddSyl =
@@ -39,7 +39,7 @@ my @AddSyl =
     / (<-[aeiouy]>) $0 'l' $/,  # middle twiddle battle bottle, etc.
     / <-[l]> lien/,         # alien, salient [1]
     / ^ 'coa' <[dglx]> . / ,      # [2]
-    / <![gq]> 'ua' <![auieo]>/,  # i think this fixes more than it breaks
+    / <-[gq]> 'ua' <-[auieo]>/,  # i think this fixes more than it breaks
     / 'dnt' $/,           # couldn't
 ;
 

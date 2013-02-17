@@ -3,14 +3,17 @@ use Test;
 
 use Lingua::EN::Syllable;
 
-# words specfically noted in the original p5 variant.
+# all words specfically noted in the original p5 variant test/source,
+# plus a few others.
 
 my %syl = (
     "absolutely" => 4,
     "agreeable" => 4,
+    "aquaculture" => 4,
     "alien" => 3,
     "battle" => 2,
     "belgium" => 2,
+    "bilingual" => 3,
     "bottle" => 2,
     "coadjutor" => 4,
     "coagulable" => 5,
