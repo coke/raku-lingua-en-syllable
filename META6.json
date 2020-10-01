@@ -2,7 +2,7 @@
   "name": "Lingua::EN::Syllable",
   "source-url": "git://github.com/coke/raku-lingua-en-syllable.git",
   "perl": "6.*",
-  "author": "Will “Coke” Coleda",
+  "authors": "Will “Coke” Coleda",
   "depends": [
     
   ],
