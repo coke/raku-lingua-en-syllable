@@ -10,6 +10,6 @@
   "provides": {
     "Lingua::EN::Syllable": "lib/Lingua/EN/Syllable.rakumod"
   },
-  "version": "*",
+  "version": "1.0.1",
   "description": "Guess the number of syllables in an English word"
 }
