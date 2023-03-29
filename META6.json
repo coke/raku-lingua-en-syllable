@@ -1,5 +1,8 @@
 {
-  "authors": "Will “Coke” Coleda",
+  "auth": "zef:coke",
+  "authors": [
+    "Will Coleda"
+  ],
   "build-depends": [
   ],
   "depends": [
