@@ -1,5 +1,7 @@
 Revision history for Slang::Date
 
 {{$NEXT}}
+
+1.0.3  2023-03-29T14:55:56-04:00
     - move to zef ecosystem
     - Adpot mi6
