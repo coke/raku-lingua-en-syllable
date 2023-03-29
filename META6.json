@@ -1,15 +1,22 @@
 {
-  "name": "Lingua::EN::Syllable",
-  "source-url": "git://github.com/coke/raku-lingua-en-syllable.git",
-  "perl": "6.*",
   "authors": "Will “Coke” Coleda",
-  "depends": [
-    
+  "build-depends": [
   ],
+  "depends": [
+  ],
+  "description": "Guess the number of syllables in an English word",
   "license": "Artistic-2.0",
+  "name": "Lingua::EN::Syllable",
+  "perl": "6.*",
   "provides": {
     "Lingua::EN::Syllable": "lib/Lingua/EN/Syllable.rakumod"
   },
-  "version": "1.0.2",
-  "description": "Guess the number of syllables in an English word"
+  "resources": [
+  ],
+  "source-url": "git://github.com/coke/raku-lingua-en-syllable.git",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "1.0.2"
 }
